@@ -38,6 +38,9 @@ We  take a baseline installation of a Linux distribution on a virtual machine an
 2. Created a new user named `grader` via `sudo adduser grader`.
 Once added, it asks for a password. In this case we keep it simple: `grader` and leave all the other prompts empty (This password will be unaccesible from outside the server as we'll configure later on). We confirm the information and move on. 
 
+Update: Since the password `grader` is a bad example of a strong password, we can updated it as follows: we enter `passwd grader` and we are prompted for our current password. We type it out and if right it prompts us to enter a new UNIX password and then to retype it right. The stronger sample password is: 
+`^=o>n#!o '2Bq]9nF}~g^b|@~h"ebT1`.
+
 Added the new user `grader` to the sudoers directory. 
 Thus, we `sudo nano /etc/sudoers.d/grader` and add the following text inside the file: `grader ALL=(ALL:ALL) ALL`. After, we make sure to save it.
 To check if we did this right, we run the following command to see if `grader` is there: `sudo ls /etc/sudoers.d`. 
